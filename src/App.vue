@@ -8,7 +8,7 @@
         </div>
       </div>
       <div class="right">
-        <Title text="I have bad news for you" />
+        <Title :level="1">I have bad news for you</Title>
         <Paragraph text=" The page you are looking for might be removed or is temporarily unavailable." />
         <Button text="BACK TO HOMEPAGE" />
       </div>
@@ -24,6 +24,7 @@ import Title from '@/components/Title-cmp.vue';
 import Paragraph from '@/components/Paragraph-cmp.vue';
 import Button from '@/components/Button-cmp.vue';
 import Footer from '@/components/Footer-cmp.vue';
+
 
 export default {
   name: 'App',
@@ -43,10 +44,7 @@ export default {
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
-* {
-  margin: 0%;
-  padding: 0%;
-}
+
 body {
   width: 100%;
   height: 100vh;
@@ -54,10 +52,12 @@ body {
 main{
   display: flex;
   flex-direction: column;
+  margin: 0%;
 }
 .content {
   display: flex;
-  flex-direction: row;
+  flex-direction: start;
+  justify-content: space-evenly;
 }
 .left {
   display: flex;
@@ -65,16 +65,16 @@ main{
   justify-content: center;
   align-items: center;
   width: 50%;
-  height: 70vh;
+  height: 85vh;
 }
 .img {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .scarecrow-img {
-  display: flex;
-  width: 35vw;
+  width: 28%;
   min-width: 460px;
 }
 
@@ -83,31 +83,45 @@ main{
   flex-direction: column;
   justify-content: space-evenly;
   width: 50%;
-  height: 70vh;
+  height: 85vh;
+  margin: 0;
 }
 .footer {
   width: 100%;
 }
 @media screen and (max-width: 1250px) {
   main {
-    justify-content: start;
-    gap: 10%;
-  }
-  .scarecrow-img {
-    min-width: 260px;
-    margin-left: -10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin: 0%;
   }
   .content {
+    display: flex;
     flex-direction: column;
-    width: 100%;
+    justify-content: space-evenly;
+    height: 90%;
+    margin: 10%;
     gap: 30px;
   }
-  .left {
-    width: 100%;
-    height: auto;
+  .scarecrow-img {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    width: 70vw;
+    min-width: 160px;
+  }
+    .left {
+    width: 75vw;
+    height: 20vh;
+  
   }
   .right {
-    width: 100%;
+    width: 90vw;
+    height: 56vh;
+    margin: 0%;
   }
+
 }
 </style>

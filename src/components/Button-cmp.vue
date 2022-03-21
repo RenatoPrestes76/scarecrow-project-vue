@@ -30,7 +30,7 @@ export default {
   .button{
     display: flex;
     justify-content: flex-start;
-    margin: 5%;
+   
   }
 }
 </style>

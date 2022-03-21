@@ -1,41 +1,76 @@
 <template>
   <div class="title">
-    <h1>{{text}}</h1>
-  </div>
+      <h1 v-if="level === 1">
+        <slot></slot>
+      </h1>
+      <h2 v-else-if="level === 2">
+        <slot></slot>
+      </h2>
+      <h3 v-else-if="level === 3">
+        <slot></slot>
+      </h3>
+      <h4  v-else-if="level === 4">
+        <slot></slot>
+      </h4>
+      <h5  v-else-if="level === 5">
+        <slot></slot>
+      </h5>
+      <h6  v-else-if="level === 6">
+        <slot></slot>
+      </h6>
+</div>
 </template>
 <script>
+
+
 export default {
   name: 'Title',
   props:{
-    text:{
-      type: String
+    level: {
+      type: Number,
+      Required: true
     }
   }
 };
 </script>
 <style scoped>
-.title h1 {
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+h1 {
   font-family: 'Space Mono';
   font-style: normal;
   font-weight: 700;
-  font-size: 80px;
-  line-height: 70px;
+  font-size: 60px;
+  line-height: 80px;
   letter-spacing: -0.035em;
   color: #333333;
-  width: 50vw;
+  width: 45vw;
   height: 20vh;
-  margin: 0%;
+  margin: 0;
 }
 @media screen and (max-width: 1250px) {
   .title{
     display: flex;
-    justify-content: flex-end;
-    margin: 0%;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 80%;
+    
   }
-  .title h1{
-    width: 96%;
-    font-size: 48px;
-    margin: 0%;
-  } 
+  h1 {
+     font-family: 'Space Mono';
+      font-style: normal;
+      font-weight: 900;
+      font-size: 30px;
+      line-height: 28px;
+      letter-spacing: -0.035em;
+      color: #333333;
+      width: 80vw;
+      height: 10vh;
+      margin: 0%;
+  }
 }
 </style>

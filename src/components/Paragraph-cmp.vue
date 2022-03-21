@@ -24,16 +24,27 @@ export default {
   letter-spacing: -0.035em;
   color: #4f4f4f;
   width: 70%;
+  height: 18vh;
   margin: 0%;
 }
 @media screen and (max-width: 1250px) {
   .paragraph {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
   }
   .paragraph p {
-    width: 91%;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 400;
     font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.035em;
+    color: #4f4f4f;
+    width: 100%;
+    height: 10vh;
+    margin: 0%;    
   }
 }
 </style>
