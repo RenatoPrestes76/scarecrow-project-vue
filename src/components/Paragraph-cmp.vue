@@ -1,17 +1,16 @@
 <template>
-
   <div class="paragraph">
-    <p>{{text}}</p>
+    <p>{{ text }}</p>
   </div>
 </template>
 <script>
 export default {
   name: 'Paragraph',
-  props:{
-    text:{
-      type: String
-    }
-  }
+  props: {
+    text: {
+      type: String,
+    },
+  },
 };
 </script>
 <style scoped>
@@ -19,7 +18,7 @@ export default {
   font-family: 'Space Mono';
   font-style: normal;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 25px;
   line-height: 35px;
   letter-spacing: -0.035em;
   color: #4f4f4f;
@@ -44,7 +43,7 @@ export default {
     color: #4f4f4f;
     width: 100%;
     height: 10vh;
-    margin: 0%;    
+    margin: 0%;
   }
 }
 </style>

@@ -4,12 +4,18 @@
     <div class="content">
       <div class="left">
         <div class="img">
-          <img class="scarecrow-img" src="./assets/Scarecrow.png" alt="Scarecrow" />
+          <img
+            class="scarecrow-img"
+            src="./assets/Scarecrow.png"
+            alt="Scarecrow"
+          />
         </div>
       </div>
       <div class="right">
         <Title :level="1">I have bad news for you</Title>
-        <Paragraph text=" The page you are looking for might be removed or is temporarily unavailable." />
+        <Paragraph
+          text=" The page you are looking for might be removed or is temporarily unavailable."
+        />
         <Button text="BACK TO HOMEPAGE" />
       </div>
     </div>
@@ -24,7 +30,6 @@ import Title from '@/components/Title-cmp.vue';
 import Paragraph from '@/components/Paragraph-cmp.vue';
 import Button from '@/components/Button-cmp.vue';
 import Footer from '@/components/Footer-cmp.vue';
-
 
 export default {
   name: 'App',
@@ -44,84 +49,94 @@ export default {
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
-
 body {
   width: 100%;
   height: 100vh;
+  margin: 0;
 }
-main{
+main {
   display: flex;
   flex-direction: column;
-  margin: 0%;
+  margin: 0;
 }
 .content {
   display: flex;
-  flex-direction: start;
-  justify-content: space-evenly;
+  flex-direction: row;
+  width: 85vw;
+  height: 90vh;
+  margin: 0;
 }
 .left {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  width: 50%;
-  height: 85vh;
+  width: 100vw;
+  height: 95%;
+  margin: 0;
 }
 .img {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  max-width: 500px;
 }
 .scarecrow-img {
-  width: 28%;
-  min-width: 460px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  min-width: 400px;
 }
-
 .right {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: flex-start;
   width: 50%;
-  height: 85vh;
-  margin: 0;
+  height: 95%;
+  margin: 0%;
 }
 .footer {
   width: 100%;
 }
 @media screen and (max-width: 1250px) {
+  body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+  }
   main {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-start;
     margin: 0%;
   }
   .content {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 90%;
-    margin: 10%;
-    gap: 30px;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+    margin: 0;
   }
-  .scarecrow-img {
+  .left {
     display: flex;
     flex-direction: row;
     align-content: center;
-    width: 70vw;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  .img {
+    max-width: 250px;
+  }
+  .scarecrow-img {
     min-width: 160px;
   }
-    .left {
-    width: 75vw;
-    height: 20vh;
-  
-  }
   .right {
-    width: 90vw;
-    height: 56vh;
-    margin: 0%;
+    display: flex;
+    width: 85vw;
+    height: 45%;
+    margin: 10%;
+    gap: 30px;
   }
-
 }
 </style>

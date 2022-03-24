@@ -1,16 +1,18 @@
 <template>
   <div class="button">
-    <h1><button>{{text}}</button></h1>
+    <h1>
+      <button>{{ text }}</button>
+    </h1>
   </div>
 </template>
 <script>
 export default {
   name: 'Button',
-  props:{
-    text:{
-      type: String
-    }
-  }
+  props: {
+    text: {
+      type: String,
+    },
+  },
 };
 </script>
 <style scoped>
@@ -27,10 +29,11 @@ export default {
   padding: 22px 43px;
 }
 @media screen and (max-width: 1250px) {
-  .button{
+  .button {
     display: flex;
     justify-content: flex-start;
-   
+    width: 70vw;
+    height: 50%;
   }
 }
 </style>

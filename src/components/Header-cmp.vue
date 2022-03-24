@@ -1,16 +1,16 @@
 <template>
   <div class="header">
-    <h1>{{text}}</h1>
+    <h1>{{ text }}</h1>
   </div>
 </template>
 <script>
 export default {
   name: 'Header',
-  props:{
-    text:{
-      type: String
-    }
-  }
+  props: {
+    text: {
+      type: String,
+    },
+  },
 };
 </script>
 <style scoped>
@@ -20,6 +20,7 @@ export default {
   justify-content: flex-start;
   align-items: flex-start;
   width: 50%;
+  margin: 0;
 }
 h1 {
   font-family: 'Inconsolata';
