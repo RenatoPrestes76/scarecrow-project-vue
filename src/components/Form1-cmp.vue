@@ -1,11 +1,11 @@
 <template>
-  <div class="footer">
-    <h1>{{ text }}</h1>
+  <div class="form1">
+    <p>{{ text }}</p>
   </div>
 </template>
 <script>
 export default {
-  name: 'Footer',
+  name: 'Form1',
   props: {
     text: {
       type: String,
