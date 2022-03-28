@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    <h1>{{ texto }}</h1>
+    <h1>{{ text }}</h1>
   </div>
 </template>
 <script>
